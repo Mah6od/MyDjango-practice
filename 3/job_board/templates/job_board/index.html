@@ -1,0 +1,5 @@
+<html>
+    {% for posting in job_postings %}
+    <li> {{posting.title}} | {{posting.description}} | ${{posting.salary}} </li>
+    {% endfor %}
+</html>

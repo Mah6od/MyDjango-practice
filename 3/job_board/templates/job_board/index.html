@@ -1,6 +1,19 @@
+{% extends 'job_board/_base.html' %}
 {% load humanize %}
-<html>
-    {% for posting in job_postings %}
-    <li> {{ posting.title|title }} | {{ posting.description }} | ${{ posting.salary|intcomma }} </li>
-    {% endfor %}
-</html>
+
+{% block content %}
+    
+    <div class="flex justify-center w-10/12 mx-auto flex-wrap gap-6">
+        {% for posting in job_postings %}
+            <a class="w-1/4 text-center" href="{% url 'job-detail' posting.pk %}">
+            <div class="border rounded px-8 py-10 bg-gray-50 hover:bg-gray-100 hover:cursor-pointer">
+                <p class="text-2xl pb-2">{{posting.title}}</p>
+                <hr class="py-2">
+                <p class="font-semibold pb-2">Company: {{posting.company}}</p>
+                <p class="text-xl pb-2">Salary: ${{posting.salary|intcomma}}</p>
+                <p class="underline underline-offset-2 text-blue-500 hover:text-blue-400">View Details</p>
+            </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

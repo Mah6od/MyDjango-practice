@@ -1,10 +1,11 @@
-<html>
-    <u1>
-        <li>{{ posting.title }}</li>
-        <li>{{ posting.company }}</li>
-        <li>${{ posting.salary }}</li>
-        <li>Active{{ posting.is_active }}</li>
-        <hr>
-        <li>{{ posting.description }}</li>
-    </u1>        
-</html>
+{% extends 'job_board/_base.html' %}
+{% load humanize %}
+{% block content %}
+<div class="w-10/12 mx-auto">
+    <p class="pb-6"><a href="{% url 'home' %}" class="border border-gray-400 rounded px-4 py-2 hover:bg-gray-200">Go back</a></p>
+    <h1 class="text-3xl font-semibold pb-4 underline underline-offset-8">{{posting.title}}</h1>
+    <p class="pb-2 text-xl">Company: {{posting.company}}</p>
+    <p class="pb-2 font-semibold">Salary: ${{posting.salary|intcomma}}</p>
+    <p>Description: {{posting.description}}</p>
+</div>
+{% endblock content %}

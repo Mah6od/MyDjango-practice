@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
+from .forms import LinkForm
 from .models import Link
 
 # Create your views here.
 def index(request):
-    links = Link.objects.all()
+    links = Link.objects.all().order_by("-clicks")
     context = {
-        'links': links
+        "links": links
     }
     return render(request, 'links/index.html', context)
 

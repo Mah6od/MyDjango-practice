@@ -9,7 +9,7 @@ class Profile(models.Model):
         ('green', ' Green'),
         ('yellow', 'Yellow'),
     )
-
+    
     # name, slug, background color
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
@@ -27,4 +27,4 @@ class Link(models.Model):
     def __str__(self):
         return f"{self.text} | {self.url}"
 
-# many(profile) to many(links) & one to one & one to many
+# many(profile) to many(links) & one to one & one to many 

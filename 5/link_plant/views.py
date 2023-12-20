@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Profile, Link
 
-# Create your views here.
+# views
 class LinkListView(ListView):
     # query for all the links Link.objects.all()
     # context = {'links':links}

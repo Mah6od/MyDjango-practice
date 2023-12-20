@@ -5,4 +5,4 @@ I'm in learning process of django and i want to edit these files during my cours
 
 *Day 7: now i have better understanding of Django and its environment.
 css & html is out of my league for now :))
-at this point, i prefer to keep focus on Django concepts rather than css & html.
+it's easy to catch though, but at this point, i prefer to keep focus on main concept, rather than css & html

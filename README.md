@@ -11,3 +11,8 @@ Just for fun! I'm currently in the process of learning Django, and I plan to upd
 - Now, I have a better understanding of Django and its environment.
 - CSS & HTML are currently out of my league :)) They're easy to catch, though.
 - At this point, I prefer to keep my focus on the main concept rather than CSS & HTML.
+
+### Day 11
+- I finished the course and that was so exciting. it helped me through this goal.
+- some of functions does not work and i dont know why.
+- but I've done each steps well
